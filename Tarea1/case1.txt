@@ -1,0 +1,14 @@
+Para el primer caso hay un error en el codigo debido a que 
+se crea la variable "a" y se aloja un espacio en memoria
+para un arreglo de tipo entero de 10 elementos. 
+A la hora de crear el ciclo para popular dicho arreglo, se inicia el 
+indice en 0 pero la condicion de terminacion es que mientras el indice 
+sea menor que 11, continue la ejecucion del codigo de dentro del ciclo.
+Si realizamos la cuenta de 0 a 10 (mientras que sea menor que 11) el indice 
+puede llegar a tomar el valor de 10. Dado que el contador inicia en 0, el 
+indice al tomar el valor de 10 implica que estamos accediendo la posicion 
+11 del arreglo y esta posicion no existe dado que el espacio alamcenado en 
+memoria es de 10 enteros. 
+
+En este caso valgrind esta detectando que hay un error al acceder a una posicion
+donde hay 0 asignados.

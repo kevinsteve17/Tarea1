@@ -1,0 +1,4 @@
+En este caso el problema es que solo se libera una posicion de memoria.
+Se necesita crear un loop para liberar toda la memoria. 
+Valgrind detecta este tipo de errores y brinda un summary donde cuenta 
+la cantidad de mallocs y la cantidad de frees llamados. 
