@@ -1,0 +1,10 @@
+En este caso la asginacion memoria corresponde con el accesso a cada 
+posicion para almacenar un valor especifico. Sin embargo, al recorrer
+por segunda vez el arreglo de nuevo hay un error en el limite del indice,
+por ende accesa a una posicion de memoria que no ha sido asignada para el 
+arreglo, y por lo tanto el valor leido es un valor sucio que no corresponde
+a los valores almacenados.
+
+valgrind detecta que hay un uso de un valor no inicialiazado y que lo saltos
+condicionales o movimientos en la memoria dependen de los valores no inicializados.
+
